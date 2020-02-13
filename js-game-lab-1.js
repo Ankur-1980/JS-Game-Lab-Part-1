@@ -6,3 +6,12 @@ if (play == true) {
 } else {
 	alert('Run away you COWARD!!!');
 }
+
+let hits = 0;
+let playerHealth = 40;
+let result = '';
+do {
+	hits++;
+	result = playerHealth - (Math.floor(Math.random() * 2) + 1);
+	console.log(result);
+} while (result != 0);
