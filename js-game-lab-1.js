@@ -5,7 +5,7 @@ function startGame() {
 	if (newGame == true) {
 		const userName = prompt('Poor fool, what is your name?');
 		// basic game values
-		let userHP = 20;
+		let userHP = 40;
 		let grantHP = 10;
 		let wins = 0;
 		// battle begins
