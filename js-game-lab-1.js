@@ -1,9 +1,9 @@
 function startGame() {
 	// start the game
-	const newGame = confirm('Would you like to play a game?');
+	const newGame = confirm('Would you like to battle against the Almighty Grant?');
 	// user name
 	if (newGame == true) {
-		const userName = prompt('What is your name?');
+		const userName = prompt('Poor fool, what is your name?');
 		// basic game values
 		let userHP = 40;
 		let grantHP = 10;
