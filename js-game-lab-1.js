@@ -8,17 +8,18 @@ function startGame() {
 		let userHP = 20;
 		let grantHP = 10;
 		let wins = 0;
-		// battle
+		// battle begins
 		console.log(`${userName} starts off with ${userHP} \n Grant starts off with ${grantHP}`);
-
+		// what happens during battle
 		while (userHP > 0 && wins < 3) {
 			userHP -= Math.floor(Math.random() * 2 + 1);
 			grantHP -= Math.floor(Math.random() * 2 + 1);
 			console.log(`${userName} has ${userHP} remaining`);
 			console.log(`Grant has ${grantHP} remaining`);
+			// if both user & grant get to zero in the same loop
 			if (grantHP <= 0 && userHP <= 0) {
 				console.log('DOUBLE KO!!!');
-				// if both user & grant get to zero in the same loop
+				// if only Grant's health points get to zero
 			} else if (grantHP <= 0) {
 				console.log(`I'm not dead yet, let's do this again!`);
 				grantHP = 10;
