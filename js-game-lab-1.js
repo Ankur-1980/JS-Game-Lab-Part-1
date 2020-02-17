@@ -5,7 +5,7 @@ function startGame() {
 	if (newGame == true) {
 		const userName = prompt('Poor fool, what is your name?');
 		// basic game values
-		let userHP = 40;
+		let userHP = 20;
 		let grantHP = 10;
 		let wins = 0;
 		// battle
@@ -16,18 +16,21 @@ function startGame() {
 			grantHP -= Math.floor(Math.random() * 2 + 1);
 			console.log(`${userName} has ${userHP} remaining`);
 			console.log(`Grant has ${grantHP} remaining`);
-			if (grantHP <= 0) {
+			if (grantHP <= 0 && userHP <= 0) {
+				console.log('DOUBLE KO!!!');
+				// if both user & grant get to zero in the same loop
+			} else if (grantHP <= 0) {
 				console.log(`I'm not dead yet, let's do this again!`);
 				grantHP = 10;
 				wins++;
 			}
 		}
-		// if you win
+		// if you get three wins
 		if (wins === 3) {
 			console.log(`Nope, I am really dead this time \n ${userName} is VICTORIOUS!!!`);
 		}
 
-		// if you lose
+		// if you lose all of you health points before getting three wins
 		else {
 			console.log(`${userName}, you lose, you get nothing, good day sir!`);
 		}
